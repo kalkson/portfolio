@@ -1,6 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+
+    :root {
+        --primaryColor: #bbb739;
+        --secondaryColor: #cccccc;
+        --bgColor: #222222;
+        --darkerBgColor: #171515;
+    }
+
     *,
     *:before,
     *:after {
@@ -35,6 +43,19 @@ const GlobalStyle = createGlobalStyle`
         &:hover {
             border: none;
             outline: none;
+        }
+    }
+
+    .active-nav-button {
+        & > button {
+            
+            & > .nav__button__background {
+                transform: translateX(0);
+            }
+
+            & > span {
+                font-weight: 700;
+            }
         }
     }
 
