@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: `Damian Kalka Portfolio`,
@@ -16,6 +18,14 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-layout`,
+    `gatsby-plugin-root-import`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `nlzbi3ams6fn`,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
@@ -32,4 +42,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
