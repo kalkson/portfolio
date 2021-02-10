@@ -5,7 +5,7 @@ import StyledNav from "./Nav.styled";
 
 const Nav = () => (
   <StyledNav className="nav">
-    <Link exact to="/" activeClassName="active-nav-button">
+    <Link to="/" activeClassName="active-nav-button">
       <NavButton>about</NavButton>
     </Link>
     <Link to="/projects" activeClassName="active-nav-button">

@@ -7,10 +7,8 @@ import Nav from "../components/organisms/Nav/Nav";
 const MainLayout = ({ children }) => (
   <>
     <GlobalStyle />
-    <StyledMainLayout>
-      <Nav />
-      {children}
-    </StyledMainLayout>
+    <Nav />
+    <StyledMainLayout>{children}</StyledMainLayout>
   </>
 );
 

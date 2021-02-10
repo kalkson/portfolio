@@ -7,6 +7,8 @@ const StyledNav = styled.nav`
   display: flex;
   flex-direction: column;
   outline: solid 2px var(--darkerBgColor);
+  background: var(--bgColor);
+  position: fixed;
 
   @media ${device.tablet} {
     width: 87px;
