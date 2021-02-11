@@ -15,6 +15,13 @@ const StyledAboutSection = styled.section`
         position: relative;
       }
     }
+
+    &__wrapper {
+      display: flex;
+      margin-top: 50px;
+      width: 100%;
+      align-items: center;
+    }
   }
 `;
 

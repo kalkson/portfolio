@@ -9,6 +9,7 @@ const StyledNav = styled.nav`
   outline: solid 2px var(--darkerBgColor);
   background: var(--bgColor);
   position: fixed;
+  z-index: 5;
 
   @media ${device.tablet} {
     width: 87px;

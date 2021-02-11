@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
         --secondaryColor: #cccccc;
         --bgColor: #222222;
         --darkerBgColor: #171515;
+        background-color: var(--bgColor);
     }
 
     *,
@@ -22,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
         padding: 0;
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
     html {

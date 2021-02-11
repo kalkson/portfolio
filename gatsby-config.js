@@ -35,6 +35,20 @@ module.exports = {
         display: "swap",
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/, // See below to configure properly
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {

@@ -1,8 +1,11 @@
 import React, { useRef, useState } from "react";
+import propTypes from "prop-types";
 import StyledButtonCarousel from "./ButtonCarousel.styled";
 import CarouselButton from "../../atoms/CarouselButton/CarouselButton";
 
-const ButtonCarousel = () => {
+const tileTypes = ["skills", "purpose", "aboutme"];
+
+const ButtonCarousel = ({ setActiveTile }) => {
   const carousel = useRef(null);
   const [rotate, setRotate] = useState(-120);
   const [activeOne, setActive] = useState(1);
@@ -13,6 +16,8 @@ const ButtonCarousel = () => {
 
     if (activeOne === 3) setActive(1);
     else setActive(activeOne + 1);
+
+    setActiveTile(tileTypes[activeOne - 1]);
   };
 
   return (
@@ -33,6 +38,10 @@ const ButtonCarousel = () => {
       <span className="carousel__point" />
     </StyledButtonCarousel>
   );
+};
+
+ButtonCarousel.propTypes = {
+  setActiveTile: propTypes.bool.isRequired,
 };
 
 export default ButtonCarousel;
