@@ -66,6 +66,18 @@ const StyledAboutTile = styled.div`
             background: var(--primaryColor);
             border-radius: 3px;
           }
+
+          &__icons-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            @media ${device.tablet} {
+              grid-template-columns: repeat(3, 1fr);
+            }
+
+            &__element {
+            }
+          }
         }
 
         &__icons {
