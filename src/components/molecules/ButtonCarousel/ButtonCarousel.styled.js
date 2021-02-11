@@ -19,10 +19,9 @@ const StyledButtonCarousel = styled.div`
   @media ${device.tablet} {
     margin-right: 120px;
     align-self: auto;
-    position: relative;
-    top: 0;
+    top: 400px;
     width: 300px;
-    left: 10px;
+    left: 100px;
   }
 
   .carousel {

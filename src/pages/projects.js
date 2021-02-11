@@ -1,13 +1,22 @@
-import React from "react";
-import propTypes from "prop-types";
-import Headline from "../components/atoms/Headline/Headline";
+import React, { useState, useEffect } from "react";
+import ProjectWindow from "../components/organisms/ProjectWindow/ProjectWindow";
+import ProjectsWrapper from "../components/organisms/ProjectWrapper/ProjectsWrapper";
 
-const ProjectsPage = () => (
-  <>
-    <Headline>Projects</Headline>
-  </>
-);
+const ProjectsPage = () => {
+  const [isWindowActive, setWindowActive] = useState(false);
 
-ProjectsPage.propTypes = {};
+  return (
+    <>
+      <ProjectsWrapper
+        setWindowActive={setWindowActive}
+        isWindowActive={isWindowActive}
+      />
+      <ProjectWindow
+        setWindowActive={setWindowActive}
+        isWindowActive={isWindowActive}
+      />
+    </>
+  );
+};
 
 export default ProjectsPage;

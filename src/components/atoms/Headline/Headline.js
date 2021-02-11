@@ -21,6 +21,8 @@ const Headline = ({ children, className }) => {
   useEffect(() => {
     document.addEventListener("mousemove", updateShadow);
 
+    console.log(className);
+
     return () => {
       document.removeEventListener("mousemove", updateShadow);
     };

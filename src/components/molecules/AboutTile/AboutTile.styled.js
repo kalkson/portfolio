@@ -6,8 +6,13 @@ const StyledAboutTile = styled.div`
   flex-direction: column;
   width: 100%;
 
+  & > * {
+    opacity: 0;
+  }
+
   @media ${device.tablet} {
     width: 560px;
+    margin-left: 400px;
   }
 
   .about {
@@ -40,6 +45,7 @@ const StyledAboutTile = styled.div`
           display: flex;
           flex-direction: column;
           overflow-y: scroll;
+          overflow-x: hidden;
           max-height: 250px;
           padding-right: 20px;
 

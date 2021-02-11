@@ -6,6 +6,7 @@ const StyledSkillElement = styled.span`
   align-items: center;
   margin-bottom: 20px;
   font-size: 1rem;
+  opacity: 0;
 
   @media ${device.tablet} {
     font-size: 1.6rem;
