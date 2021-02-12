@@ -1,27 +1,15 @@
-import { graphql, useStaticQuery } from "gatsby";
 import propTypes from "prop-types";
 import gsap from "gsap/gsap-core";
 import React, { useRef, useEffect } from "react";
 import ProjectItem from "../../molecules/ProjectItem/ProjectItem";
 import StyledProjectsWrapper from "./ProjectsWrapper.styled";
 
-const query = graphql`
-  query MyQuery {
-    allDatoCmsProject {
-      nodes {
-        image {
-          fluid {
-            ...GatsbyDatoCmsFluid
-            tracedSVG
-          }
-        }
-      }
-    }
-  }
-`;
-
-const ProjectsWrapper = ({ setWindowActive, isWindowActive }) => {
-  const data = useStaticQuery(query);
+const ProjectsWrapper = ({
+  setWindowActive,
+  isWindowActive,
+  setActiveProject,
+  projects,
+}) => {
   const wrapper = useRef(null);
 
   useEffect(() => {
@@ -32,23 +20,27 @@ const ProjectsWrapper = ({ setWindowActive, isWindowActive }) => {
 
   return (
     <StyledProjectsWrapper ref={wrapper} isWindowActive={isWindowActive}>
-      {data.allDatoCmsProject.nodes.map(project => {
-        console.log(project);
-        return (
-          <ProjectItem
-            key={project.name}
-            data={project}
-            onClick={() => setWindowActive(true)}
-          />
-        );
-      })}
+      {projects.allDatoCmsProject.nodes.map(project => (
+        <ProjectItem
+          key={project.name}
+          data={project}
+          onClick={() => {
+            setWindowActive(true);
+            setActiveProject(project);
+          }}
+        />
+      ))}
     </StyledProjectsWrapper>
   );
 };
 
 ProjectsWrapper.propTypes = {
   setWindowActive: propTypes.func.isRequired,
+  setActiveProject: propTypes.func.isRequired,
   isWindowActive: propTypes.bool.isRequired,
+  projects: propTypes.shape({
+    allDatoCmsProject: propTypes.shape.isRequired,
+  }).isRequired,
 };
 
 export default ProjectsWrapper;

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -59,6 +59,9 @@ const GlobalStyle = createGlobalStyle`
             }
         }
     }
+
+    
+  }
 
 
 `;

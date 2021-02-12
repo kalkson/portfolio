@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import device from "../../../style/breakpoints";
+import styled from 'styled-components';
+import device from '../../../style/breakpoints';
 
 const StyledProjectDetails = styled.div`
   background: var(--darkerBgColor);
@@ -31,9 +31,11 @@ const StyledProjectDetails = styled.div`
 
         &__headline {
           font-family: Inconsolata, monospace;
+          opacity: 0;
         }
 
         &__paragraph {
+          opacity: 0;
           max-height: 225px;
           overflow-y: scroll;
           padding-right: 20px;
@@ -84,6 +86,18 @@ const StyledProjectDetails = styled.div`
           height: 100%;
           left: 100px;
           margin-left: 0;
+        }
+      }
+
+      &__anchors {
+        position: absolute;
+        bottom: 30px;
+        opacity: 0;
+
+        & svg {
+          width: 35px;
+          height: 35px;
+          margin-right: 15px;
         }
       }
     }
