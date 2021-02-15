@@ -38,7 +38,7 @@ const StyledProjectWindow = styled.section`
     background-color: var(--primaryColor);
     justify-content: center;
     align-items: center;
-    font-size: 4rem;
+    font-size: 2.5rem;
     left: -20px;
     top: calc(50% - 20px);
     cursor: pointer;

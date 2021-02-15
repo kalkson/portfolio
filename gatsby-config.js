@@ -1,8 +1,8 @@
-require("dotenv").config();
+require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: `Damian Kalka Portfolio`,
+    title: `Damian Kalka's Portfolio`,
     description: `Damian Kalka frontend dev's personal portfolio`,
     author: `Damian Kalka`,
   },
@@ -25,11 +25,11 @@ module.exports = {
         fonts: [
           `Inconsolata\:200,300,400,500,700,900`, // you can also specify font weights and styles
         ],
-        display: "swap",
+        display: 'swap',
       },
     },
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: /assets/, // See below to configure properly
@@ -65,24 +65,21 @@ module.exports = {
         // Setup locale fallbacks
         // In this example, if some field value is missing in Italian, fall back to English
         localeFallbacks: {
-          it: ["en"],
+          it: ['en'],
         },
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `gatsby-starter-default`,
-    //     short_name: `starter`,
-    //     start_url: `/`,
-    //     background_color: `#663399`,
-    //     theme_color: `#663399`,
-    //     display: `minimal-ui`,
-    //     icon: `src/assets/favicon.png`, // This path is relative to the root of the site.
-    //   },
-    // },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Damian Kalka's portfolio`,
+        short_name: `DK portfolio`,
+        start_url: `/`,
+        background_color: `#222222`,
+        theme_color: `#222222`,
+        display: `minimal-ui`,
+        icon: `src/assets/favicon.png`,
+      },
+    },
   ],
 };

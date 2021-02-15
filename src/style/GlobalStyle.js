@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
 
     * {
-        transition: color 1000ms ease-in-out 0.2s;
+        transition: color 250ms ease-in-out;
     }
 
     :root {

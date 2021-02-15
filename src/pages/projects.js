@@ -45,7 +45,7 @@ const ProjectsPage = () => {
   const [activeProject, setActiveProject] = useState({});
 
   useEffect(() => {
-    console.log(activeProject);
+    document.documentElement.style.setProperty('--primaryColor', '#6ab1de');
   });
 
   return (

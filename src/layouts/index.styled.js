@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import device from "../style/breakpoints";
+import styled from 'styled-components';
+import device from '../style/breakpoints';
 
 const StyledMainLayout = styled.main`
   width: calc(100vw - 48px);
@@ -25,8 +25,21 @@ const StyledMainLayout = styled.main`
     padding: 111px 77px 124px 58px;
   }
 
-  /* @media (min-height: 800px) {
-    padding: 111px 77px 124px 58px;
+  /* &:after {
+    content: '';
+    width: 20vw;
+    height: 70vh;
+    background: var(--primaryColor);
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform-origin: top left;
+    transform: rotate(-45deg);
+
+    transition: background 300ms linear;
+
+    overflow: visible;
+    z-index: 10;
   } */
 `;
 

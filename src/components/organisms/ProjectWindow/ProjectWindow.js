@@ -2,6 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import ProjectDetails from '../../molecules/ProjectDetails/ProjectDetails';
 import StyledProjectWindow from './ProjectWindow.styled';
+import ArrowIcon from '../../../assets/icons/arrow.svg';
 
 const ProjectWindow = ({ isWindowActive, setWindowActive, activeProject, projects }) => (
   <StyledProjectWindow className="project" isWindowActive={isWindowActive}>
@@ -11,16 +12,14 @@ const ProjectWindow = ({ isWindowActive, setWindowActive, activeProject, project
       }
       return null;
     })}
-    {console.log(isWindowActive)}
     <button
       type="button"
       className="project__return-button"
       onClick={() => {
         setWindowActive(false);
-        console.log('asd');
       }}
     >
-      ˂
+      <ArrowIcon />
     </button>
   </StyledProjectWindow>
 );

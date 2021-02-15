@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Headline from '../components/atoms/Headline/Headline';
 import ContactForm from '../components/organisms/ContactForm/ContactForm';
@@ -15,15 +15,21 @@ const StyledParagraph = styled.p`
     margin-top: 20px;
   }
 `;
-const ContactPage = () => (
-  <>
-    <Headline>Contact</Headline>
-    <StyledParagraph>
-      If you wanna contact with me to ask about something or begin our teamwork, just write here. I will respond the
-      fastest I can.
-    </StyledParagraph>
-    <ContactForm />
-  </>
-);
+const ContactPage = () => {
+  useEffect(() => {
+    document.documentElement.style.setProperty('--primaryColor', '#ae63d6');
+  });
+
+  return (
+    <>
+      <Headline>Contact</Headline>
+      <StyledParagraph>
+        If you wanna contact with me to ask about something or begin our teamwork, just write here. I will respond the
+        fastest I can.
+      </StyledParagraph>
+      <ContactForm />
+    </>
+  );
+};
 
 export default ContactPage;
