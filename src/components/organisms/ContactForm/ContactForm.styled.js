@@ -8,7 +8,7 @@ const StyledContactForm = styled.form`
   @media ${device.laptopM} {
     width: 500px;
     margin-left: 150px;
-    margin-top: 100px;
+    margin-top: 60px;
   }
 
   & label {
@@ -17,6 +17,7 @@ const StyledContactForm = styled.form`
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    opacity: 0;
   }
 
   & *:focus {
