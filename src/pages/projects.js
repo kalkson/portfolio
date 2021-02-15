@@ -27,14 +27,12 @@ const query = graphql`
 
 const StyledProjectsPage = styled.div`
   & > h1 {
-    /* display: none; */
     position: absolute;
     bottom: 5%;
     transition: transform 100ms linear;
 
     @media ${device.tablet} {
       bottom: 15%;
-      /* display: block; */
       transform: ${({ isWindowActive }) => (isWindowActive ? 'translateX(47px)' : 'translateX(300px)')};
     }
   }

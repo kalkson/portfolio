@@ -9,6 +9,7 @@ const ProjectWindow = ({ isWindowActive, setWindowActive, activeProject, project
       if (project === activeProject) {
         return <ProjectDetails data={project} />;
       }
+      return null;
     })}
     {console.log(isWindowActive)}
     <button

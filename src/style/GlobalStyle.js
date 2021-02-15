@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
         --bgColor: #222222;
         --darkerBgColor: #171515;
         background-color: var(--bgColor);
+        scroll-behavior: smooth;
     }
 
     *,
