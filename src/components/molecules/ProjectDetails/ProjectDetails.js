@@ -6,20 +6,34 @@ import StyledProjectDetails from './ProjectDetails.styled';
 import GithubIcon from '../../../assets/icons/github.svg';
 import WebsiteIcon from '../../../assets/icons/website.svg';
 
-const ProjectDetails = ({ data: { name, description, fluid, github, url } }) => {
+const ProjectDetails = ({
+  data: {
+    name,
+    description,
+    github,
+    url,
+    image: { fluid },
+  },
+}) => {
   const descriptionElement = useRef(null);
   const headline = useRef(null);
   const anchors = useRef(null);
+  const imageRef = useRef(null);
 
   useEffect(() => {
     descriptionElement.current.innerHTML = description;
 
     const timeline = gsap.timeline({ delay: 0.5 });
 
-    console.log(headline.current);
+    console.log(imageRef.current);
     timeline.fromTo(headline.current, { x: '200', opacity: 0 }, { x: '0', opacity: 1, duration: 0.2 });
     timeline.fromTo(descriptionElement.current, { x: '200', opacity: 0 }, { x: '0', opacity: 1, duration: 0.2 });
     timeline.fromTo(anchors.current, { x: '200', opacity: 0 }, { x: '0', opacity: 1, duration: 0.2 });
+    timeline.fromTo(
+      document.querySelector('.project__details__image'),
+      { x: '200', opacity: 0 },
+      { x: '0', opacity: 1, duration: 0.2 }
+    );
 
     timeline.play();
   });
@@ -34,7 +48,12 @@ const ProjectDetails = ({ data: { name, description, fluid, github, url } }) => 
           {description}
         </p>
       </div>
-      <GatsbyImage fluid={fluid} className="project__details__image" />
+      <GatsbyImage
+        fluid={{ ...fluid, aspectRatio: 16 / 8 }}
+        imageStyle={{ objectFit: 'contain' }}
+        alt={name}
+        className="project__details__image"
+      />
       {(github || url) && (
         <div className="project__details__anchors" ref={anchors}>
           {github && (
@@ -56,7 +75,7 @@ const ProjectDetails = ({ data: { name, description, fluid, github, url } }) => 
 ProjectDetails.propTypes = {
   data: propTypes.shape({
     name: propTypes.string.isRequired,
-    fluid: propTypes.shape,
+    image: propTypes.shape(propTypes.shape),
     description: propTypes.string.isRequired,
     github: propTypes.string,
     url: propTypes.string,

@@ -7,15 +7,22 @@ const StyledProjectDetails = styled.div`
   max-width: 1110px;
   max-height: 550px;
   padding: 30px 30px 80px 31px;
+  width: calc(100% + 50px);
   position: relative;
   display: flex;
   flex-direction: column-reverse;
+  justify-content: space-evenly;
   height: 80vh;
 
   @media ${device.tablet} {
+    padding: 40px 30px 80px 51px;
+  }
+
+  @media ${device.laptopM} {
     padding: 40px 0 80px 51px;
     height: 490px;
     flex-direction: row;
+    width: 100%;
   }
 
   @media ${device.desktop} {
@@ -69,23 +76,19 @@ const StyledProjectDetails = styled.div`
       &__image {
         position: relative;
 
-        height: 150px;
-        width: 250px;
-        right: 50px;
-
         @media ${device.tablet} {
-          height: 30%;
-          width: auto;
-          margin-left: 50px;
-          right: 0;
+          height: 50%;
         }
         @media ${device.laptopM} {
-          height: 60%;
+          width: 100%;
+          height: 85%;
         }
         @media ${device.laptopL} {
-          height: 100%;
           left: 100px;
           margin-left: 0;
+        }
+        @media ${device.desktop} {
+          height: 100%;
         }
       }
 
@@ -93,6 +96,10 @@ const StyledProjectDetails = styled.div`
         position: absolute;
         bottom: 30px;
         opacity: 0;
+
+        @media ${device.tablet} {
+          left: 51px;
+        }
 
         & svg {
           width: 35px;

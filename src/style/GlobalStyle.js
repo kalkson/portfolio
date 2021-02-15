@@ -60,9 +60,6 @@ const GlobalStyle = createGlobalStyle`
         }
     }
 
-    
-  }
-
 
 `;
 
