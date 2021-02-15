@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import device from "../../../style/breakpoints";
+import styled from 'styled-components';
+import device from '../../../style/breakpoints';
 
 const StyledAboutTile = styled.div`
   display: flex;
@@ -90,6 +90,10 @@ const StyledAboutTile = styled.div`
           margin: 20px 0 30px auto;
 
           & svg {
+            & path {
+              fill: var(--primaryColor);
+            }
+
             width: 25px;
             height: 25px;
 

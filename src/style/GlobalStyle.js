@@ -2,6 +2,10 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
+    * {
+        transition: color 1000ms ease-in-out 0.2s;
+    }
+
     :root {
         --primaryColor: #bbb739;
         --secondaryColor: #cccccc;

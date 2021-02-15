@@ -1,9 +1,9 @@
-import React, { useRef, useState } from "react";
-import propTypes from "prop-types";
-import StyledButtonCarousel from "./ButtonCarousel.styled";
-import CarouselButton from "../../atoms/CarouselButton/CarouselButton";
+import React, { useRef, useState } from 'react';
+import propTypes from 'prop-types';
+import StyledButtonCarousel from './ButtonCarousel.styled';
+import CarouselButton from '../../atoms/CarouselButton/CarouselButton';
 
-const tileTypes = ["skills", "purpose", "aboutme"];
+const tileTypes = ['skills', 'purpose', 'aboutme'];
 
 const ButtonCarousel = ({ setActiveTile }) => {
   const carousel = useRef(null);
@@ -21,11 +21,7 @@ const ButtonCarousel = ({ setActiveTile }) => {
   };
 
   return (
-    <StyledButtonCarousel
-      ref={carousel}
-      className="carousel"
-      onClick={() => handleClick()}
-    >
+    <StyledButtonCarousel ref={carousel} className="carousel" onClick={() => handleClick()}>
       <CarouselButton active={activeOne === 1} activeNumber={1}>
         about me
       </CarouselButton>

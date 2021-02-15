@@ -1,12 +1,29 @@
-import React from "react"
-import SEO from "../components/seo"
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import SEO from '../components/seo';
+import Headline from '../components/atoms/Headline/Headline';
+
+const Styled404 = styled.main`
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 15vh auto 0;
+
+  * a {
+    color: var(--secondaryColor);
+    font-size: 3rem;
+  }
+`;
 
 const NotFoundPage = () => (
   <>
     <SEO title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <Styled404>
+      <Headline>404</Headline>
+      <Link to="/">Go to Home page</Link>
+    </Styled404>
   </>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

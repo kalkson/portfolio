@@ -97,6 +97,10 @@ const StyledProjectDetails = styled.div`
         bottom: 30px;
         opacity: 0;
 
+        & path {
+          fill: var(--primaryColor);
+        }
+
         @media ${device.tablet} {
           left: 51px;
         }
