@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import ProjectWindow from '../components/organisms/ProjectWindow/ProjectWindow';
 import ProjectsWrapper from '../components/organisms/ProjectWrapper/ProjectsWrapper';
 import Headline from '../components/atoms/Headline/Headline';
+import device from '../style/breakpoints';
 
 const query = graphql`
   query MyQuery {
@@ -25,17 +26,16 @@ const query = graphql`
 `;
 
 const StyledProjectsPage = styled.div`
-  h1 {
+  & > h1 {
+    /* display: none; */
     position: absolute;
-    bottom: 10%;
-    left: 350px;
-    display: none;
-    transition: transform 200s ease;
+    bottom: 5%;
+    transition: transform 100ms linear;
 
-    @media (min-width: 768px) {
-      transform: ${({ isWindowActive }) => (isWindowActive ? 'translateX(-280px)' : 'translateX(0)')};
-      display: inline;
-      left: 420px;
+    @media ${device.tablet} {
+      bottom: 15%;
+      /* display: block; */
+      transform: ${({ isWindowActive }) => (isWindowActive ? 'translateX(47px)' : 'translateX(300px)')};
     }
   }
 `;
