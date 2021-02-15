@@ -48,7 +48,7 @@ const ButtonCarousel = ({ setActiveTile }) => {
 };
 
 ButtonCarousel.propTypes = {
-  setActiveTile: propTypes.bool.isRequired,
+  setActiveTile: propTypes.func.isRequired,
 };
 
 export default ButtonCarousel;

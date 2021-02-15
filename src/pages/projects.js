@@ -20,6 +20,7 @@ const query = graphql`
         description
         github
         url
+        id
       }
     }
   }

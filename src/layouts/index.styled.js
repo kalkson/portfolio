@@ -34,6 +34,10 @@ const StyledMainLayout = styled.main`
     display: flex;
     flex-direction: column;
     text-align: right;
+
+    & a {
+      color: aliceblue;
+    }
   }
 
   /* &:after {

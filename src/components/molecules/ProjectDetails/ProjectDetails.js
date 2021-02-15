@@ -18,14 +18,12 @@ const ProjectDetails = ({
   const descriptionElement = useRef(null);
   const headline = useRef(null);
   const anchors = useRef(null);
-  const imageRef = useRef(null);
 
   useEffect(() => {
     descriptionElement.current.innerHTML = description;
 
     const timeline = gsap.timeline({ delay: 0.5 });
 
-    console.log(imageRef.current);
     timeline.fromTo(headline.current, { x: '200', opacity: 0 }, { x: '0', opacity: 1, duration: 0.2 });
     timeline.fromTo(descriptionElement.current, { x: '200', opacity: 0 }, { x: '0', opacity: 1, duration: 0.2 });
     timeline.fromTo(anchors.current, { x: '200', opacity: 0 }, { x: '0', opacity: 1, duration: 0.2 });
