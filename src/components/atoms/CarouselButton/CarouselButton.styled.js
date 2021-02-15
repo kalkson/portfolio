@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledCarouselButton = styled.button`
   color: var(--secondaryColor);
@@ -23,6 +23,7 @@ const StyledCarouselButton = styled.button`
         font-weight: 600;
         transform: translate(80px, 0) !important;
         font-size: 2.5rem;
+        opacity: 1 !important;
     `};
 
   ${({ active, activeNumber }) =>
@@ -32,6 +33,7 @@ const StyledCarouselButton = styled.button`
         font-weight: 600;
         transform: translate(40px, 10px) rotate(120deg) !important;
         font-size: 2.5rem;
+        opacity: 1 !important;
     `};
 
   ${({ active, activeNumber }) =>
@@ -41,6 +43,7 @@ const StyledCarouselButton = styled.button`
         font-weight: 600;
         transform: translate(80px, -10px) rotate(240deg) !important;
         font-size: 2.5rem;
+        opacity: 1 !important;
     `};
 `;
 
