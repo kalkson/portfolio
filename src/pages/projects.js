@@ -20,6 +20,7 @@ const query = graphql`
         description
         github
         url
+        id
       }
     }
   }
@@ -28,11 +29,12 @@ const query = graphql`
 const StyledProjectsPage = styled.div`
   & > h1 {
     position: absolute;
-    bottom: 5%;
     transition: transform 100ms linear;
+    display: none;
 
-    @media ${device.tablet} {
-      bottom: 15%;
+    @media ${device.tablet} and (min-height: 700px) {
+      display: block;
+      bottom: 5%;
       transform: ${({ isWindowActive }) => (isWindowActive ? 'translateX(47px)' : 'translateX(300px)')};
     }
   }

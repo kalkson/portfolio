@@ -49,6 +49,11 @@ const StyledAboutTile = styled.div`
           max-height: 250px;
           padding-right: 20px;
 
+          & a {
+            color: var(--primaryColor);
+            text-decoration: inderline;
+          }
+
           @media (min-width: 375px) and (min-height: 700px) {
             max-height: 400px;
           }
@@ -106,6 +111,10 @@ const StyledAboutTile = styled.div`
           & svg:first-child {
             margin-right: 15px;
           }
+        }
+
+        .no-flex {
+          display: block;
         }
       }
     }

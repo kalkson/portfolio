@@ -8,7 +8,7 @@ const ProjectWindow = ({ isWindowActive, setWindowActive, activeProject, project
   <StyledProjectWindow className="project" isWindowActive={isWindowActive}>
     {projects.allDatoCmsProject.nodes.map(project => {
       if (project === activeProject) {
-        return <ProjectDetails data={project} />;
+        return <ProjectDetails data={project} key={project.id} />;
       }
       return null;
     })}
@@ -28,15 +28,25 @@ ProjectWindow.propTypes = {
   isWindowActive: propTypes.bool.isRequired,
   setWindowActive: propTypes.func.isRequired,
   activeProject: propTypes.shape({
-    name: propTypes.string.isRequired,
-    fluid: propTypes.shape,
-    description: propTypes.string.isRequired,
+    name: propTypes.string,
+    description: propTypes.string,
     github: propTypes.string,
     url: propTypes.string,
-  }).isRequired,
+    fluid: propTypes.shape(),
+  }),
   projects: propTypes.shape({
     allDatoCmsProject: propTypes.shape.isRequired,
   }).isRequired,
+};
+
+ProjectWindow.defaultProps = {
+  activeProject: {
+    name: null,
+    description: null,
+    github: null,
+    url: null,
+    fluid: null,
+  },
 };
 
 export default ProjectWindow;

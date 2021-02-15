@@ -25,6 +25,21 @@ const StyledMainLayout = styled.main`
     padding: 111px 77px 124px 58px;
   }
 
+  .footer {
+    position: absolute;
+    font: 1.2rem/1.5rem Inconsolata, monospace;
+    color: var(--primaryColor);
+    right: 20px;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+    & a {
+      color: aliceblue;
+    }
+  }
+
   /* &:after {
     content: '';
     width: 20vw;

@@ -17,12 +17,22 @@ const ProjectItem = ({
 );
 
 ProjectItem.propTypes = {
-  data: propTypes.shape(propTypes.oneOfType([propTypes.string, propTypes.shape])),
+  data: propTypes.shape({
+    image: propTypes.shape({
+      fluid: propTypes.shape(),
+    }),
+    name: propTypes.string,
+  }),
   onClick: propTypes.func.isRequired,
 };
 
 ProjectItem.defaultProps = {
-  data: {},
+  data: {
+    image: {
+      fluid: null,
+    },
+    name: null,
+  },
 };
 
 export default ProjectItem;

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import device from "../../../style/breakpoints";
+import styled from 'styled-components';
+import device from '../../../style/breakpoints';
 
 const StyledProjectsWrapper = styled.div`
   height: 100vh;
@@ -7,11 +7,11 @@ const StyledProjectsWrapper = styled.div`
   transform: translateX(-100%);
   transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform: translateX(0);
-  /* transform: translateX(-100%); */
   overflow-x: hidden;
 
-  transform: ${({ isWindowActive }) =>
-    isWindowActive ? "translate(-100%)" : "translate(0)"};
+  z-index: 2;
+
+  transform: ${({ isWindowActive }) => (isWindowActive ? 'translate(-100%)' : 'translate(0)')};
 
   position: absolute;
   top: 0;
@@ -36,8 +36,7 @@ const StyledProjectsWrapper = styled.div`
   ::-webkit-scrollbar-thumb {
     background: var(--primaryColor);
     border-radius: 3px;
-    box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05),
-      inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
   }
 
   @media ${device.tablet} {
