@@ -43,7 +43,7 @@ const StyledProjectDetails = styled.div`
 
         &__paragraph {
           opacity: 0;
-          max-height: 225px;
+          max-height: 175px;
           overflow-y: scroll;
           padding-right: 20px;
 

@@ -13,7 +13,7 @@ const StyledButtonCarousel = styled.div`
   left: -82px;
 
   @media (min-width: 375px) {
-    left: -100px;
+    left: -115px;
   }
 
   @media ${device.mobile} {
