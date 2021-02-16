@@ -47,7 +47,7 @@ const StyledContactForm = styled.form`
   }
 
   & textarea {
-    min-height: 200px;
+    min-height: 150px;
 
     ::-webkit-scrollbar {
       width: 3px;
