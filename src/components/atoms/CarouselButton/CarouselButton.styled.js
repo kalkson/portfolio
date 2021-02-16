@@ -21,7 +21,7 @@ const StyledCarouselButton = styled.button`
     activeNumber === 1 &&
     `
         font-weight: 600;
-        transform: translate(80px, 0) !important;
+        transform: translate(80px, -3px) !important;
         font-size: 2.5rem;
         opacity: 1 !important;
     `};
@@ -31,7 +31,7 @@ const StyledCarouselButton = styled.button`
     activeNumber === 2 &&
     `
         font-weight: 600;
-        transform: translate(40px, 10px) rotate(120deg) !important;
+        transform: translate(35px, 13px) rotate(120deg) !important;
         font-size: 2.5rem;
         opacity: 1 !important;
     `};
@@ -41,7 +41,7 @@ const StyledCarouselButton = styled.button`
     activeNumber === 3 &&
     `
         font-weight: 600;
-        transform: translate(80px, -10px) rotate(240deg) !important;
+        transform: translate(72px, -15px) rotate(240deg) !important;
         font-size: 2.5rem;
         opacity: 1 !important;
     `};
