@@ -5,6 +5,7 @@ import ProjectWindow from '../components/organisms/ProjectWindow/ProjectWindow';
 import ProjectsWrapper from '../components/organisms/ProjectWrapper/ProjectsWrapper';
 import Headline from '../components/atoms/Headline/Headline';
 import device from '../style/breakpoints';
+import SEO from '../components/seo';
 
 const query = graphql`
   query MyQuery {
@@ -52,6 +53,7 @@ const ProjectsPage = () => {
 
   return (
     <StyledProjectsPage isWindowActive={isWindowActive}>
+      <SEO title="Projects" />
       <ProjectsWrapper
         setWindowActive={setWindowActive}
         isWindowActive={isWindowActive}
