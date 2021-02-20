@@ -10,7 +10,7 @@ const IndexPage = () => {
   return (
     <>
       <SEO
-        title="Home Page"
+        title="About"
         description="Damian Kalka webdeveloper's personal portfolio where you can browse his created projects and contact with"
       />
       <AboutSection />

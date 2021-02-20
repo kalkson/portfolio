@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Headline from '../components/atoms/Headline/Headline';
 import ContactForm from '../components/organisms/ContactForm/ContactForm';
+import SEO from '../components/seo';
 import device from '../style/breakpoints';
 
 const StyledParagraph = styled.p`
@@ -22,6 +23,7 @@ const ContactPage = () => {
 
   return (
     <>
+      <SEO title="Contact" />
       <Headline>Contact</Headline>
       <StyledParagraph>
         If you wanna contact with me to ask about something or begin our teamwork, just write here. I will respond the

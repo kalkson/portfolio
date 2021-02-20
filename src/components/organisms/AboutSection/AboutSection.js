@@ -19,6 +19,8 @@ import GraphqlIcon from '../../../assets/icons/graphql.svg';
 import FirebaseIcon from '../../../assets/icons/firebase.svg';
 import AdobexdIcon from '../../../assets/icons/adobexd.svg';
 import VscIcon from '../../../assets/icons/vsc.svg';
+import GitIcon from '../../../assets/icons/git.svg';
+import BootstrapIcon from '../../../assets/icons/bootstrap.svg';
 
 const AboutSection = () => {
   const [activeTile, setActiveTile] = useState('aboutme');
@@ -100,8 +102,15 @@ const AboutSection = () => {
                 <SkillElement>
                   <VscIcon /> VSCode
                 </SkillElement>
+                <SkillElement>
+                  <GitIcon /> git
+                </SkillElement>
+                <SkillElement>
+                  <BootstrapIcon /> Bootstrap
+                </SkillElement>
               </div>
-              Except that I&apos;m aknowledge about technologies such as: git, REST API, Figma, npm, node etc.
+              Except that I&apos;m aknowledge about technologies such as: node, npm, REST API, Figma, react-testing
+              (basics)
             </div>
           </AboutTile>
         )}
